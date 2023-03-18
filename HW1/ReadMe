@@ -1,1 +1,19 @@
 Implementing the model and plotting two curve of training, testing loss with respect to training iteration in a single plot
+
+
+The code trains a straightforward fully connected neural network (FNN) to categorize pictures of handwritten numbers from the MNIST dataset. 
+Here is a quick rundown of what the code accomplishes:
+1. Using tf.keras.datasets.mnist to load the MNIST dataset. With pixel values ranging from 0 to 255, the dataset consists of 10,000 test pictures 
+   and 60,000 training images.
+2. Dividing the data into training and testing sets before dividing by 255.0 to standardize the pixel values to be between 0 and 1.
+3. Utilizing tf.keras.models, define the FNN model. Sequential. Three completely linked layers of 128, 64, and 10 neurons each make 
+   up the model. The 28x28 pixel pictures are flattened into a 1D collection by the input layer, which is a Flatten layer.
+4. Using the model to compile the model. compile. The loss function is sparse categorical crossentropy, 
+   and the algorithm is adam. Accuracy is the measure used to assess the algorithm.
+5. Using model.fit to train the model. The fit technique receives as inputs the training data, labels, and the number of training epochs (10 in this case). 
+   We are able to track the model's success on data that it has never seen before thanks to the validation data and labels that are also transmitted in.
+6. Using matplotlib.pyplot to plot the training and assessment loss curves. The x-axis on the loss curves represents the number of training iterations (epochs), 
+   and the y-axis the loss (error) of the model on the training and testing sets. The loss curves display the success of the model over the period of training. 
+   We can see how well the model generalizes to new data by graphing both trends together.
+7. Also in the ipynb in another cell showing the training and testing loss as well as the training and testing precision of a neural network model, 
+   there are two subplots, totaling four graphs.
