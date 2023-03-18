@@ -1,5 +1,5 @@
 Implementing the model and plotting two curve of training, testing loss with respect to training iteration in a single plot
-
+This code can be executed in google colab
 
 The code trains a straightforward fully connected neural network (FNN) to categorize pictures of handwritten numbers from the MNIST dataset. 
 Here is a quick rundown of what the code accomplishes:
